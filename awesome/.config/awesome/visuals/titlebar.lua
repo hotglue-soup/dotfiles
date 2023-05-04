@@ -1,3 +1,9 @@
+----------------------------------------
+--                                    --
+--         Currently Unused           --
+--                                    --
+----------------------------------------
+
 -- module("anybox.titlebar", package.seeall)
 
 -- Standard awesome library

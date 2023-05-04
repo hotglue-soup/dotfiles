@@ -10,7 +10,7 @@ function _M.get ()
   
     local tagpairs = {
       names = {"main", "code", "browser", "media", "extra"},
-      layout = { RC.layouts[1], RC.layouts[1], RC.layouts[3], RC.layouts[2], RC.layouts[0] }
+      layout = { RC.layouts[2], RC.layouts[2], RC.layouts[4], RC.layouts[3], RC.layouts[1] }
     }
   
     awful.screen.connect_for_each_screen(function(s)

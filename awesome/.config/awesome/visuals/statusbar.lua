@@ -9,11 +9,11 @@ local wibox = require("wibox")
 local visuals = {
   wallpaper = require("visuals.wallpaper"),
   taglist   = require("visuals.taglist"),
-  tasklist  = require("visuals.tasklist")
+  -- tasklist  = require("visuals.tasklist")
 }
 
 local taglist_buttons  = visuals.taglist()
-local tasklist_buttons = visuals.tasklist()
+-- local tasklist_buttons = visuals.tasklist()
 
 local _M = {}
 
@@ -48,11 +48,11 @@ awful.screen.connect_for_each_screen(function(s)
   }
 
   -- Create a tasklist widget
-  s.mytasklist = awful.widget.tasklist {
-    screen  = s,
-    filter  = awful.widget.tasklist.filter.currenttags,
-    buttons = tasklist_buttons
-  }
+  -- s.mytasklist = awful.widget.tasklist {
+  --   screen  = s,
+  --   filter  = awful.widget.tasklist.filter.currenttags,
+  --   buttons = tasklist_buttons
+  -- }
 
   -- Create the wibox
   s.mywibox = awful.wibar({ position = "top", screen = s })
@@ -66,7 +66,7 @@ awful.screen.connect_for_each_screen(function(s)
       s.mytaglist,
       s.mypromptbox,
     },
-    s.mytasklist, -- Middle widget
+    -- s.mytasklist, -- Middle widget
     { -- Right widgets
       layout = wibox.layout.fixed.horizontal,
       mykeyboardlayout,
