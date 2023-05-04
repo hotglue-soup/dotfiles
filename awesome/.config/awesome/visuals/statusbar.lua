@@ -21,7 +21,7 @@ local _M = {}
 -- Wibar
 
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = wibox.widget.textclock(" %I:%M %p ")
 
 awful.screen.connect_for_each_screen(function(s)
   -- Wallpaper
@@ -67,12 +67,13 @@ awful.screen.connect_for_each_screen(function(s)
       s.mypromptbox,
     },
     -- s.mytasklist, -- Middle widget
+    nil, -- empty middle widget
     { -- Right widgets
       layout = wibox.layout.fixed.horizontal,
-      mykeyboardlayout,
+      -- mykeyboardlayout,
       wibox.widget.systray(),
       mytextclock,
-      s.mylayoutbox,
+      -- s.mylayoutbox,
     },
   }
 end)
